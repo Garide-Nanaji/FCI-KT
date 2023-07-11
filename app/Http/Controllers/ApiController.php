@@ -10,7 +10,7 @@ class ApiController extends Controller
     //listing the records from table
     public function index()
     {
-        $records = DcpsModel::paginate(10);
+        $records = DcpsModel::latest(10);
         return response()->json($records);
     }
 
@@ -59,7 +59,7 @@ class ApiController extends Controller
     public function destroy($id)
     {
         $record = DcpsModel::find($id);
-
+ 
         if (!$record) {
             return response()->json(['message' => 'Record not found'], 404);
         }

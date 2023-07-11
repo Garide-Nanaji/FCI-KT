@@ -14,7 +14,13 @@
                         </div>
                     @endif
                  <div>
-                   <h1>Welcom to dashboard<h1>
+                   <h1>Welcom to dashboard<h1><hr>
+                 </div>
+                 <div>
+                   <button><a href="api1view">Fetch Data from Api-1</a></button>
+                 </div><br>
+                 <div>
+                 <button><a href="api2view">Fetch Data from Api-2</a></button>
                  </div>
                 </div>
             </div>

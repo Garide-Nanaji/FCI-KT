@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Api1Controller;
+use App\Http\Controllers\Api2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,6 @@ Route::get('registration', [AuthController::class, 'registerform'])->name('regis
 Route::post('registerstore', [AuthController::class, 'registerstore'])->name('registerstore'); 
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/api1view', [Api1Controller::class, 'Api1data']);
+Route::get('/api2view', [Api2Controller::class, 'Api2data']);
